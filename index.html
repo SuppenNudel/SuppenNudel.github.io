@@ -3,28 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Section</title>
+    <meta http-equiv="refresh" content="0;url=https://nudelforce.notion.site/Homepage-13df020626c280c0b4ebf993cd38fada">
+    <title>SuppenNudel's Page</title>
 </head>
 <body>
-    <div id="content">Loading...</div>
-
-    <script>
-        async function fetchAndExtract(url, selector) {
-            try {
-                const response = await fetch(url);
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, "text/html");
-                const extracted = doc.querySelector(selector);
-                
-                document.getElementById("content").innerHTML = extracted ? extracted.innerHTML : "Section not found.";
-            } catch (error) {
-                console.error("Error fetching content:", error);
-                document.getElementById("content").innerHTML = "Error loading content.";
-            }
-        }
-
-        fetchAndExtract("https://mtg.wiki/", "#mw-content-text div.flex div:nth-of-type(2)"); // Change URL and selector
-    </script>
+    <div>My <a href="https://nudelforce.notion.site/Homepage-13df020626c280c0b4ebf993cd38fada">Homepage</a> is over at Notion</div>
 </body>
 </html>
