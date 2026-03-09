@@ -1,1 +1,150 @@
 
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Support My Work</title>
+		<style>
+			:root {
+				color-scheme: light;
+				--bg: #f6f3ee;
+				--panel: #ffffff;
+				--ink: #1b1b1b;
+				--muted: #5a554f;
+				--accent: #2a6f4e;
+				--accent-ink: #ffffff;
+				--border: #e2ddd5;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				font-family: "Georgia", "Times New Roman", serif;
+				background: radial-gradient(circle at top, #faf7f2 0%, var(--bg) 55%, #efe9e0 100%);
+				color: var(--ink);
+			}
+
+			main {
+				max-width: 880px;
+				margin: 0 auto;
+				padding: 56px 20px 80px;
+			}
+
+			h1 {
+				font-size: clamp(2.2rem, 3vw, 3rem);
+				margin: 0 0 12px;
+				letter-spacing: 0.02em;
+			}
+
+			p {
+				line-height: 1.6;
+				margin: 0 0 20px;
+				color: var(--muted);
+			}
+
+			.grid {
+				display: grid;
+				gap: 20px;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				margin-top: 32px;
+			}
+
+			.card {
+				background: var(--panel);
+				border: 1px solid var(--border);
+				border-radius: 16px;
+				padding: 22px;
+				box-shadow: 0 12px 30px rgba(27, 27, 27, 0.08);
+			}
+
+			.card h2 {
+				font-size: 1.2rem;
+				margin: 0 0 12px;
+			}
+
+			.button {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 10px 16px;
+				border-radius: 999px;
+				border: 1px solid transparent;
+				background: var(--accent);
+				color: var(--accent-ink);
+				text-decoration: none;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.button:hover {
+				transform: translateY(-1px);
+				box-shadow: 0 8px 16px rgba(42, 111, 78, 0.25);
+			}
+
+			.note {
+				font-size: 0.95rem;
+				margin-top: 10px;
+			}
+
+			iframe {
+				display: block;
+			}
+
+			footer {
+				margin-top: 40px;
+				font-size: 0.9rem;
+				color: var(--muted);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Support My Work</h1>
+			<p>
+				If you enjoy what I make and want to help me keep building, here are the
+				easiest ways to donate. Thank you for the support.
+			</p>
+
+			<section class="grid">
+				<div class="card">
+					<h2>GitHub Sponsors</h2>
+					<iframe
+						src="https://github.com/sponsors/SuppenNudel/button"
+						title="Sponsor SuppenNudel"
+						height="32"
+						width="114"
+						style="border: 0; border-radius: 6px;"
+					></iframe>
+					<p class="note">
+						One-time or recurring support via GitHub.
+					</p>
+				</div>
+
+				<div class="card">
+					<h2>PayPal</h2>
+					<a
+						class="button"
+						href="https://www.paypal.com/donate/?hosted_button_id=W9AEZD9ME48NY"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Donate with PayPal
+					</a>
+					<p class="note">
+						Quick one-time donation through PayPal.
+					</p>
+				</div>
+			</section>
+
+			<footer>
+				Every contribution helps with hosting, tooling, and future projects.
+			</footer>
+		</main>
+	</body>
+</html>
+
