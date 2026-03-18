@@ -55,137 +55,184 @@
             font-size: 1rem;
         }
 
-        .panel-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-        }
-
-        .panel {
-            min-height: calc(100vh - 150px);
-            display: flex;
-            flex-direction: column;
-            background: var(--panel);
+        .profile-entry {
+            margin-bottom: 20px;
+            padding: 18px 20px;
+            background: rgba(255, 252, 246, 0.78);
             border: 1px solid var(--border);
-            border-radius: 22px;
-            box-shadow: var(--shadow);
-            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 14px 30px rgba(62, 44, 31, 0.08);
             backdrop-filter: blur(10px);
         }
 
-        .panel.card-link {
+        .profile-entry h2 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+        }
+
+        .profile-entry p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .profile-entry-actions {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 14px;
+        }
+
+        .profile-entry-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 14px;
+            border: 1px solid rgba(156, 79, 47, 0.22);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            color: var(--accent);
+            font-weight: 600;
             text-decoration: none;
+        }
+
+        .profile-entry-link:hover {
+            border-color: rgba(156, 79, 47, 0.42);
+            text-decoration: none;
+        }
+
+        .projects {
+            position: relative;
+            padding: 22px;
+            background:
+                radial-gradient(circle at top right, rgba(156, 79, 47, 0.16), transparent 28%),
+                linear-gradient(180deg, rgba(255, 251, 247, 0.96), rgba(248, 240, 229, 0.92));
+            border: 1px solid rgba(156, 79, 47, 0.2);
+            border-radius: 22px;
+            box-shadow: 0 26px 60px rgba(62, 44, 31, 0.16);
+            backdrop-filter: blur(10px);
+        }
+
+        .projects-header {
+            margin-bottom: 18px;
+        }
+
+        .projects-header h2 {
+            margin: 0 0 8px;
+            font-size: 1.2rem;
+        }
+
+        .projects-header p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .projects-header strong {
+            color: var(--ink);
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .project-link {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 18px 20px;
+            border: 1px solid rgba(156, 79, 47, 0.16);
+            border-radius: 16px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(251, 244, 235, 0.96));
             color: inherit;
+            text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
-        .panel.card-link:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 28px 60px rgba(62, 44, 31, 0.2);
-            border-color: rgba(156, 79, 47, 0.35);
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 36px rgba(62, 44, 31, 0.14);
+            border-color: rgba(156, 79, 47, 0.4);
         }
 
-        .panel.card-link:focus-visible {
+        .project-link:focus-visible {
             outline: 3px solid rgba(156, 79, 47, 0.35);
             outline-offset: 4px;
         }
 
-        .panel-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            padding: 18px 20px;
-            border-bottom: 1px solid var(--border);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 248, 240, 0.58));
+        .project-name {
+            font-weight: 700;
+            color: var(--ink);
+            font-size: 1.03rem;
         }
 
-        .panel-title {
-            margin: 0;
-            font-size: 1.05rem;
-        }
-
-        .panel-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .panel-link:hover {
-            text-decoration: underline;
-        }
-
-        iframe {
-            flex: 1;
-            width: 100%;
-            min-height: 640px;
-            border: 0;
-            background: #ffffff;
-        }
-
-        .fallback {
-            padding: 12px 20px 18px;
+        .project-url {
             color: var(--muted);
             font-size: 0.95rem;
-            border-top: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.5);
+            word-break: break-word;
         }
 
-        .panel-body {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 24px 20px 22px;
-            background:
-                radial-gradient(circle at top right, rgba(156, 79, 47, 0.12), transparent 32%),
-                linear-gradient(180deg, rgba(255, 250, 244, 0.96), rgba(249, 241, 230, 0.88));
+        .donations-panel {
+            margin-top: 28px;
+            padding: 20px 22px;
+            background: rgba(255, 252, 246, 0.72);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: 0 14px 30px rgba(62, 44, 31, 0.08);
+            backdrop-filter: blur(10px);
         }
 
-        .panel-copy {
-            max-width: 34rem;
-        }
-
-        .eyebrow {
+        .donations-panel h2 {
             margin: 0 0 8px;
-            color: var(--accent);
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
+            font-size: 1rem;
         }
 
-        .panel-copy p {
+        .donations-panel p {
             margin: 0;
             color: var(--muted);
-            line-height: 1.65;
+            line-height: 1.6;
         }
 
-        .cta-row {
+        .donations-actions {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            padding-top: 12px;
-            border-top: 1px solid var(--border);
-            color: var(--ink);
-            font-weight: 600;
+            justify-content: flex-start;
+            margin-top: 14px;
         }
 
-        .cta-arrow {
-            font-size: 1.2rem;
+        .donations-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 14px;
+            border: 1px solid rgba(156, 79, 47, 0.22);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
             color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .donations-link:hover {
+            border-color: rgba(156, 79, 47, 0.42);
+            text-decoration: none;
         }
 
         @media (max-width: 920px) {
-            .panel-grid {
-                grid-template-columns: 1fr;
+            .profile-entry-actions {
+                justify-content: stretch;
             }
 
-            .panel {
-                min-height: 70vh;
+            .profile-entry-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .donations-actions {
+                justify-content: stretch;
+            }
+
+            .donations-link {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -195,45 +242,67 @@
         <section class="hero">
             <h1>SuppenNudel</h1>
             <p>
-                This page keeps the homepage and support options in one place. If the Notion panel
-                does not render in your browser, open it directly using the link in the panel header.
+                This is the GitHub Pages home for my projects. The main focus here is the software,
+                tools, and experiments I am actively building.
             </p>
         </section>
 
-        <section class="panel-grid">
-            <a class="panel card-link" href="https://nudelforce.notion.site/Homepage-13df020626c280c0b4ebf993cd38fada" target="_blank" rel="noreferrer">
-                <header class="panel-header">
-                    <h2 class="panel-title">Homepage</h2>
-                    <span class="panel-link">Open in Notion</span>
-                </header>
-                <div class="panel-body">
-                    <div class="panel-copy">
-                        <p class="eyebrow">Main Site</p>
-                        <p>
-                            Visit the Notion homepage for the full hub: projects, updates, and everything
-                            else collected in one place.
-                        </p>
-                    </div>
-                    <div class="cta-row">
-                        <span>Go to homepage</span>
-                        <span class="cta-arrow" aria-hidden="true">→</span>
-                    </div>
-                </div>
-            </a>
+        <section class="profile-entry" aria-labelledby="profiles-entry-title">
+            <h2 id="profiles-entry-title">Profiles</h2>
+            <p>
+                Public links for Magic platforms, streaming, social accounts, and other profiles are
+                collected on a separate page.
+            </p>
+            <div class="profile-entry-actions">
+                <a class="profile-entry-link" href="profiles.html">Open profiles page</a>
+            </div>
+        </section>
 
-            <article class="panel">
-                <header class="panel-header">
-                    <h2 class="panel-title">Donations</h2>
-                    <a class="panel-link" href="donations.html" target="_blank" rel="noreferrer">
-                        Open donations page
-                    </a>
-                </header>
-                <iframe
-                    src="donations.html"
-                    title="Support SuppenNudel"
-                    loading="lazy"
-                ></iframe>
-            </article>
+        <section class="projects" aria-labelledby="projects-title">
+            <div class="projects-header">
+                <h2 id="projects-title">Projects</h2>
+                <p><strong>Featured repositories</strong> and active tools, linked directly to GitHub.</p>
+            </div>
+
+            <div class="project-list">
+                <a class="project-link" href="https://github.com/SuppenNudel/cardmarket-helper" target="_blank" rel="noreferrer">
+                    <span class="project-name">cardmarket-helper</span>
+                    <span class="project-url">github.com/SuppenNudel/cardmarket-helper</span>
+                </a>
+
+                <a class="project-link" href="https://github.com/SuppenNudel/cardmarket-streamer-mode" target="_blank" rel="noreferrer">
+                    <span class="project-name">cardmarket-streamer-mode</span>
+                    <span class="project-url">github.com/SuppenNudel/cardmarket-streamer-mode</span>
+                </a>
+
+                <a class="project-link" href="https://github.com/SuppenNudel/manabox-viewer" target="_blank" rel="noreferrer">
+                    <span class="project-name">manabox-viewer</span>
+                    <span class="project-url">github.com/SuppenNudel/manabox-viewer</span>
+                </a>
+
+                <a class="project-link" href="https://github.com/SuppenNudel/radio-ravnica-paper-events" target="_blank" rel="noreferrer">
+                    <span class="project-name">radio-ravnica-paper-events</span>
+                    <span class="project-url">github.com/SuppenNudel/radio-ravnica-paper-events</span>
+                </a>
+
+                <a class="project-link" href="https://github.com/SuppenNudel/radio-ravnica-discord-bot" target="_blank" rel="noreferrer">
+                    <span class="project-name">radio-ravnica-discord-bot</span>
+                    <span class="project-url">github.com/SuppenNudel/radio-ravnica-discord-bot</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="donations-panel" aria-labelledby="donations-title">
+            <h2 id="donations-title">Support</h2>
+            <p>
+                If you want to help fund hosting, tooling, or future work, the donation page is still
+                available here.
+            </p>
+            <div class="donations-actions">
+                <a class="donations-link" href="donations.html" target="_blank" rel="noreferrer">
+                    Open donations page
+                </a>
+            </div>
         </section>
     </main>
 </body>
